@@ -240,3 +240,44 @@ body.dark-mode .contact-link {
 body.dark-mode .contact-link:hover {
   color: #64b5f6;
 }
+
+.custom-btn {
+  background: transparent;
+  color: #333;
+  border: 2px solid #333;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .custom-btn {
+  border-color: white;
+  color: white;
+}
+
+body.dark-mode .custom-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.project-link {
+  color: #007bff;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+

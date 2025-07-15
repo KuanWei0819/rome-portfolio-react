@@ -9,7 +9,6 @@ import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Resume from './components/Resume'; // Make sure this exists
 import './index.css';
 
 function App() {
@@ -25,7 +24,7 @@ function App() {
 
       <div style={{ position: 'fixed', top: '1rem', right: '1rem', zIndex: 9999 }}>
         <button
-          className="btn btn-outline-light"
+          className="custom-btn"
           onClick={() => setDarkMode(prev => !prev)}
         >
           Toggle {darkMode ? 'Light' : 'Dark'} Mode
@@ -44,7 +43,6 @@ function App() {
             <Contact />
           </>
         } />
-        <Route path="/resume" element={<Resume />} />
       </Routes>
     </Router>
   );

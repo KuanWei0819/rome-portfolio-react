@@ -1,35 +1,55 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-export default function Navbar() {
+function Navbar() {
+  const location = useLocation();
+
+  const handleNavClick = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleLink = (e, id) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      window.location.href = `/#${id}`;
+    } else {
+      handleNavClick(id);
+    }
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg" id="topNav">
-      <div className="container-fluid d-flex justify-content-between align-items-center">
-        <a className="navbar-brand d-flex align-items-center" href="#hero">
-          <img
-            src="profile.jpg"
-            alt="Profile"
-            className="img-profile me-2"
-          />
-          <span style={{ fontWeight: 'bold' }}>Rome Lin</span>
-        </a>
-
-
-        <div className="collapse navbar-collapse justify-content-end" id="navbarResponsive">
-          <ul className="navbar-nav d-flex flex-row">
-            <li className="nav-item"><a className="nav-link px-3" href="#about">About</a></li>
-            <li className="nav-item"><a className="nav-link px-3" href="#experience">Experience</a></li>
-            <li className="nav-item"><a className="nav-link px-3" href="#education">Education</a></li>
-            <li className="nav-item"><a className="nav-link px-3" href="#skills">Skills</a></li>
-            <li className="nav-item"><a className="nav-link px-3" href="#project">Projects</a></li>
-            <li className="nav-item">
-              <a className="nav-link px-3" href="/resume-kuanwei-lin.pdf" target="_blank" rel="noopener noreferrer">
-                Resume
+    <nav id="topNav">
+      <div className="nav-wrapper">
+        <Link className="navbar-brand" to="/">Rome Lin</Link>
+        <ul className="navbar-nav">
+          {["about", "experience", "education", "skills", "projects", "contact"].map((section) => (
+            <li key={section}>
+              <a
+                href={`/#${section}`}
+                className="nav-link"
+                onClick={(e) => handleLink(e, section)}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
               </a>
             </li>
-            <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>  {/* ← Add this */}
-          </ul>
-        </div>
+          ))}
+          <li>
+            <a
+              className="nav-link"
+              href={`${process.env.PUBLIC_URL}/resume-kuanwei-lin.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PDF Resume
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
   );
 }
+
+export default Navbar;
