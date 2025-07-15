@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/rome-portfolio-react/static/css/main.3637a7a4.css",
-    "main.js": "/rome-portfolio-react/static/js/main.2b82267e.js",
+    "main.css": "/rome-portfolio-react/static/css/main.a61cf04a.css",
+    "main.js": "/rome-portfolio-react/static/js/main.8f397165.js",
     "static/js/453.3e3601c4.chunk.js": "/rome-portfolio-react/static/js/453.3e3601c4.chunk.js",
     "index.html": "/rome-portfolio-react/index.html",
-    "main.3637a7a4.css.map": "/rome-portfolio-react/static/css/main.3637a7a4.css.map",
-    "main.2b82267e.js.map": "/rome-portfolio-react/static/js/main.2b82267e.js.map",
+    "main.a61cf04a.css.map": "/rome-portfolio-react/static/css/main.a61cf04a.css.map",
+    "main.8f397165.js.map": "/rome-portfolio-react/static/js/main.8f397165.js.map",
     "453.3e3601c4.chunk.js.map": "/rome-portfolio-react/static/js/453.3e3601c4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3637a7a4.css",
-    "static/js/main.2b82267e.js"
+    "static/css/main.a61cf04a.css",
+    "static/js/main.8f397165.js"
   ]
 }
